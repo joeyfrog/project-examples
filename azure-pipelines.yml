@@ -13,4 +13,4 @@ steps:
 - task: JfrogCli@1
   inputs:
     artifactoryService: 'Joey SaaS'
-    command: 'jfrog rt curl "gengeirc/jquery-1.4.4.min.js.zip"'
+    command: 'jfrog rt curl "gengeirc/jquery-1.4.4.min.js.zip" #'
