@@ -13,4 +13,4 @@ steps:
 - task: JfrogCli@1
   inputs:
     artifactoryService: 'Joey SaaS'
-    command: 'jfrog rt p'
+    command: 'jfrog rt p #'
