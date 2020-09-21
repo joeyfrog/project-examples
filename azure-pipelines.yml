@@ -14,5 +14,5 @@ steps:
   inputs:
     artifactoryService: 'Joey SaaS'
     useCustomVersion: true
-    cliVersion: '1.20.0'
+    cliVersion: '1.37.1'
     command: 'jfrog rt curl "gengeirc/jquery-1.4.4.min.js.zip?trace"'
