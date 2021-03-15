@@ -30,3 +30,10 @@ steps:
     artifactoryService: 'Joey SaaS'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
+
+- task: ArtifactoryXrayScan@1
+  inputs:
+    artifactoryService: 'Joey SaaS'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
+    allowFailBuild: true
