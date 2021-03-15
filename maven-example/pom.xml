@@ -9,8 +9,6 @@
 
     <modules>
         <module>multi1</module>
-        <module>multi2</module>
-        <module>multi3</module>
     </modules>
 
     <properties>
@@ -19,14 +17,6 @@
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
 
     <build>
         <pluginManagement>
