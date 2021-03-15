@@ -1,15 +1,5 @@
-# Maven
-- task: ArtifactoryBuildPromotion@1
-  inputs:
-    artifactoryService: 'Joey SaaS'
-    buildName: '$(Build.DefinitionName)'
-    buildNumber: '$(Build.BuildNumber)'
-    targetRepo: 'gengeirc'
-    status: 'Released'
-    includeDependencies: true
-    copy: false
-    dryRun: false
-    
+
+
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
@@ -27,3 +17,15 @@ steps:
     useCustomVersion: true
     cliVersion: '1.37.1'
     command: 'jfrog rt curl "gengeirc/jquery-1.4.4.min.js.zip?trace"'
+
+# Maven
+- task: ArtifactoryBuildPromotion@1
+  inputs:
+    artifactoryService: 'Joey SaaS'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
+    targetRepo: 'gengeirc'
+    status: 'Released'
+    includeDependencies: true
+    copy: false
+    dryRun: false
