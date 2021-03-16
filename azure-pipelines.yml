@@ -15,10 +15,10 @@ steps:
   inputs:
     mavenPomFile: 'maven-example/pom.xml'
     goals: 'install'
-    artifactoryResolverService: 'JoeyDMZ'
+    artifactoryResolverService: 'JoeyDMZ2'
     targetResolveReleaseRepo: 'libs-release'
     targetResolveSnapshotRepo: 'libs-snapshot'
-    artifactoryDeployService: 'JoeyDMZ'
+    artifactoryDeployService: 'JoeyDMZ2'
     targetDeployReleaseRepo: 'libs-release'
     targetDeploySnapshotRepo: 'libs-snapshot'
     collectBuildInfo: true
@@ -27,13 +27,13 @@ steps:
 
 - task: ArtifactoryPublishBuildInfo@1
   inputs:
-    artifactoryService: 'JoeyDMZ'
+    artifactoryService: 'JoeyDMZ2'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
 
 - task: ArtifactoryXrayScan@1
   inputs:
-    artifactoryService: 'JoeyDMZ'
+    artifactoryService: 'JoeyDMZ2'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
     allowFailBuild: true
