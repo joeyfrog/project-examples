@@ -4,8 +4,6 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
-trigger:
-- master
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -15,10 +13,10 @@ steps:
   inputs:
     mavenPomFile: 'maven-example/pom.xml'
     goals: 'install'
-    artifactoryResolverService: 'JoeySaaS'
+    artifactoryResolverService: 'Joey SaaS'
     targetResolveReleaseRepo: 'libs-release'
     targetResolveSnapshotRepo: 'libs-snapshot'
-    artifactoryDeployService: 'JoeySaaS'
+    artifactoryDeployService: 'Joey SaaS'
     targetDeployReleaseRepo: 'libs-release'
     targetDeploySnapshotRepo: 'libs-snapshot'
     collectBuildInfo: true
@@ -27,7 +25,7 @@ steps:
 
 - task: ArtifactoryPublishBuildInfo@1
   inputs:
-    artifactoryService: 'JoeySaaS'
+    artifactoryService: 'Joey SaaS'
     buildName: '$(Build.DefinitionName)'
     buildNumber: '$(Build.BuildNumber)'
 
